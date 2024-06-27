@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-1</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">    
+    <style>
+        html,body{
+            height: 100%;
+            margin: 0;
+        }
+        .navbar.navbar-inverse{
+            border: none;
+            min-height: 40px;
+            background-color: rgb(190, 188, 188);
+            border-radius: 0%;
+            margin-bottom: 0;
+        }
+        .navbar-inverse .navbar-nav > li > a{
+            color: white;
+            line-height: 20px; 
+            padding-top: 10px; 
+            padding-bottom: 10px;
+        }
+        .navbar-inverse .navbar-nav > li > a:hover{
+            color: black;
+        }
+        h2{
+            padding-top: 5px;
+            padding-bottom: 5px;
+            margin-top: 0;
+            margin-bottom: 0;
+            height: 40px;
+            background-color: rgb(81, 212, 235);
+        }
+        .container-fluid{
+            padding-left: 0;
+            padding-right: 0;
+            height: calc(100% - 80px);
+            overflow: hidden;
+        }
+        .row{
+            height: 100%;
+        }
+        #div1{
+            padding-top: 10px;
+            width: 80%;
+            float: left;
+            height: 100%;
+        }
+        #div2{
+            background-color: gray;
+            color: white;
+            padding: 10px;
+            width: 20%;
+            float: left;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h2 class="text-center">Ethnus Layout</h2>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>                        
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">MENU</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">SIGNUP</a></li>
+                    <li><a href="#">LOGIN</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-8" id="div1">
+                <p class="text-center">Write your content here</p>
+            </div>
+            <div class="col-sm-4" id="div2">
+                <p class="text-center">This is</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

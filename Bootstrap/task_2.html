@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task2</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    <style>
+        body{
+            background-color:#dddddd;
+        }
+        .nav{
+            background-color: black;
+        }
+        .nav-link{
+            color: white;
+        }
+        .nav-link:hover{
+            color: #fdbe33;
+        }
+        .navbar a{
+            border-radius: 0;
+            color: white;
+            border-color: white;
+        }
+        .btn{
+            color: white;
+            border:solid white 2px;
+            border-radius: 0;
+        }
+        .btn:hover{
+            background-color: #fdbe33;
+            color: black;
+        }
+        .opening-hour{
+            margin-top: 4px;
+            display: flex;
+        }
+        .text h5,p{
+            color: black;
+        }
+        .text h5{
+            margin-bottom: 1px;
+        }
+        .icon{
+            margin-right: 10px;
+        }
+        .navbar{
+            background-color: black;
+        }
+        .content{
+            position: relative;
+            background-image: url('carousel-1.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            filter: brightness(80%);
+        }
+        .content .overlay-text p{
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        .content .overlay-text h2{
+            color: white;
+            font-size: 3rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        .content .overlay-text button {
+            color: white;
+            font-weight:500;
+            font-size: 1rem;    
+        }
+        img{
+            height: 450px;
+            width: 100%;
+        }
+        .footer-item{
+            background-color: black;
+        }
+        .footer-item i,h5,p{
+            color: #fdbe33;
+        }
+        .mini-box{
+            display: flex;
+            align-items: center;
+            margin-left: 30px;
+            margin-top: 30px;
+        }
+        .logo1{
+            font-size: 50px;
+            margin-right: 10px;
+        }
+        .text1 h5,p{
+            margin: 0;
+            color: #fdbe33;
+        }
+        .text1 h5{
+            margin-bottom: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container-fluid" style="background-color: #fdbe33;">
+            <div class="row px-2 py-3" style="height: 80px;" >
+                <div class="col-lg-3 col-12 brand-name" style="display: flex; align-items: center; justify-content: center;">
+                    <h1 style="font-weight:bolder;" class="fs-1">Builderz</h1>
+                </div>
+                <div class="col-lg-3 d-none d-lg-block ">
+                    <div class="opening-hour">
+                        <div class="icon">
+                            <i class="fa-solid fa-calendar" style="font-size: 40px;"></i>
+                        </div>
+                        <div class="text">
+                            <h5>Opening Hour</h5>
+                            <p style="color: black;">Mon - Fri, 8:00 - 9:00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 d-none d-lg-block">
+                    <div class="opening-hour">
+                        <div class="icon"><i class="fa-solid fa-phone" style="font-size: 40px;"></i></div>
+                        <div class="text">
+                            <h5>Call Us</h5>
+                            <p style="color: black;">+012 345 6789</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 d-none d-lg-block">
+                    <div class="opening-hour">
+                        <div class="icon"><i class="fa-regular fa-envelope" style="font-size: 40px;"></i></div>
+                        <div class="text">
+                            <h5>Email Us</h5>
+                            <p style="color: black;">info@example.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid" style="background-color: #fdbe33;">
+            <div class="row mx-lg-5">
+                <div class="col p-0">
+                    <nav class="navbar navbar-expand-lg">
+                        <a href="" class="navbar-brand d-lg-none p-3" style="text-align: center;">Menu</a>
+                        <button class="navbar-toggler me-2" data-bs-toggle="collapse" data-bs-target="#mynavbar" style="color: white;">
+                            <span class="navbar-toggler-icon" ></span>
+                        </button>
+                        <div class="collapse navbar-collapse py-2" id="mynavbar">
+                            <ul class="navbar-nav">
+                                <li class="nav-item px-4 px-lg-2"><a href="" class="nav-link">HOME</a></li>
+                                <li class="nav-item px-4 px-lg-2"><a href="" class="nav-link">ABOUT</a></li>
+                                <li class="nav-item px-4 px-lg-2"><a href="" class="nav-link">SERVICE</a></li>
+                                <li class="nav-item px-4 px-lg-2"><a href="" class="nav-link">TEAM</a></li>
+                                <li class="nav-item px-4 px-lg-2"><a href="" class="nav-link">PROJECT</a></li>
+                                <li class="nav-item dropdown px-4 px-lg-2">
+                                    <a href="" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" style="text-decoration: none;">
+                                        PAGES
+                                    </a>
+                                    <div class="dropdown-menu">
+                                        <a href="" class="dropdown-item" style="color: black;">First Page</a>
+                                        <a href="" class="dropdown-item" style="color: black;">Second page</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item px-4 px-lg-2"><a href="" class="nav-link">CONTACT</a></li>
+                            </ul>
+                            <form action="" class="ms-auto mx-4 ">
+                                <button class="btn mx-4">Get A Quote</button>
+                            </form>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="overlay-text text-center text-lg-start">
+            <div class="mb-lg-3 mx-lg-5">
+                <p class="mx-lg-5">We are Professional</p>
+            </div>
+            <div class="mb-lg-3">
+                <h2>For Your Dream Project</h2>
+            </div>
+            <dd class="mx-lg-5">
+                <div class="mx-lg-5">
+                    <div class="mx-lg-5"><button class="btn mx-lg-5">Get A Quote</button></div>
+                </div>
+            </dd>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="footer-item col-lg-4 col-12 py-3">
+                    <div class="mini-box">
+                        <div class="logo1"><i class="fa-solid fa-user-nurse"></i></div>
+                        <div class="text1">
+                            <h5>Expert Worker</h5>
+                            <p>Lorem ipsum dolor sit amet elit. Phasus nec pretim ornare velit non</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-item col-lg-4 col-12 py-3" style="background-color: #fdbe33;">
+                    <div class="mini-box">
+                        <div class="logo1"><i class="fa-regular fa-building" style="color: black;"></i></div>
+                        <div class="text1">
+                            <h5 style="color: black;">Quality Work</h5>
+                            <p style="color: black;">Lorem ipsum dolor sit amet elit. Phasus nec pretim ornare velit non</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-item col-lg-4 col-12 py-3">
+                    <div class="mini-box">
+                        <div class="logo1"><i class="fa-solid fa-phone-volume"></i></div>
+                        <div class="text1">
+                            <h5>24/7 Support</h5>
+                            <p>Lorem ipsum dolor sit amet elit. Phasus nec pretim ornare velit non</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

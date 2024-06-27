@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-7</title>
+</head>
+<body>
+    <form action="">
+        <img id = "img" src = "train1.png" />
+        <center>
+            <p>Click the following buttons to handle animation</p>
+            <input type = "button" value = "Start" onclick = "start();" />
+            <input type = "button" value = "Stop" onclick = "stop();" />
+        </center>
+    </form>
+    <script>      
+        var img = null;
+        var animationInterval = null;
+        var animationSpeed = 5;     
+        var screenWidth = (window.innerWidth) - 312;
+        function init(){      
+           img = document.getElementById('img');    
+           img.style.position = 'relative';         
+           img.style.left = '0px';
+        }         
+        function start(){      
+            animationInterval = setInterval(function (){
+                var currentPosition = parseInt(img.style.left) || 0;
+                if (currentPosition >= screenWidth){
+                    img.style.left = '0px'; // Reset to start
+                    currentPosition = 0;
+                } 
+                else{
+                    img.style.left = currentPosition + animationSpeed + 'px';
+                }
+            }, 50);
+        }      
+        function stop(){
+            clearInterval(animationInterval);
+        }
+        window.onload = init;      
+    </script>     
+</body>
+</html>

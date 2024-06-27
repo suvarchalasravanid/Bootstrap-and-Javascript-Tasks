@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-8</title>
+    <style>
+        div{
+            padding-top: 4px;
+            padding-bottom: 10px;
+            margin-left: 300px;
+            margin-right: 300px;
+            background-image: linear-gradient(to top,violet,#FFFDD0);
+        }
+        .error-msg{
+            color: red;
+        }
+        .btn{
+            background-color: red;
+            border-color: black;
+            color: white;
+            font-weight: bolder;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1 style="color:blue; text-align: center;">Registration Form</h1>
+        <form name="registrationForm" onsubmit="return validateForm()" action="">
+            <table cellspacing="8" align="center">
+                <tr>
+                    <td width="150" style="text-align: right;"><b>First Name </b></td>
+                    <td><input type="text" name="FirstName" size="65"></td>
+                    <td><span id="errorFirstName" class="error-msg"></span></td>
+                </tr>
+                <tr>
+                    <td style="text-align: right;"><b>Last Name </b></td>
+                    <td><input type="text" name="LastName" size="65"></td>
+                    <td><span id="errorLastName" class="error-msg"></span></td>
+                </tr>
+                <tr>
+                    <td style="text-align: right;"><b>Email </b></td>
+                    <td><input type="email" name="Email" size="65"></td>
+                    <td><span id="errorEmail" class="error-msg"></span></td>
+                </tr>
+                <tr>
+                    <td style="text-align: right;"><b>Password </b></td>
+                    <td><input type="password" name="password" size="65"></td>
+                    <td><span id="errorPassword" class="error-msg"></span></td>
+                </tr>
+                <tr>
+                    <td style="text-align: right;"><b>Re-enter Password </b></td>
+                    <td><input type="password" name="re password" size="65"></td>
+                    <td><span id="errorRePassword" class="error-msg"></span></td>
+                </tr>
+                <tr>
+                    <td style="text-align: right;"><b>Gender </b></td>
+                    <td colspan="2">
+                        <input type="radio" name="Gender" value="Male"> Male
+                        <input type="radio" name="Gender" value="Female"> Female
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: right;"><b>Age </b></td>
+                    <td><input type="number" name="Age" size="65"></td>
+                    <td><span id="errorAge" class="error-msg"></span></td>
+                </tr>
+                <tr>
+                    <td style="text-align: right;"><b>Phone Number </b></td>
+                    <td><input type="text" name="Phone" size="65"></td>
+                    <td><span id="errorPhone" class="error-msg"></span></td>
+                </tr>
+                <tr>
+                    <td style="text-align: right;"><b>Address </b></td>
+                    <td><textarea name="Address" cols="64" rows="4"></textarea></td>
+                    <td><span id="errorAddress" class="error-msg"></span></td>
+                </tr>
+                <tr>
+                    <td style="text-align: right;"><b>State </b></td>
+                    <td><input type="text" name="State" size="65"></td>
+                    <td><span id="errorState" class="error-msg"></span></td>
+                </tr>
+                <tr>
+                    <td style="text-align: right;"><b>Country </b></td>
+                    <td><select name="Country">
+                        <option value="Choose your country">Choose your country</option>
+                        <option value="India">India</option>
+                        <option value="US">US</option>
+                        <option value="UK">UK</option>
+                        <option value="Germany">Germany</option>
+                        </select>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td style="text-align: right;"><b>Languages known </b></td>
+                    <td colspan="2">
+                        <label for="English"><input type="checkbox" name="Languages" id="English"> English</label>
+                        <label for="Kannada"><input type="checkbox" name="Languages" id="Kannada"> Kannada</label>
+                        <label for="Hindi"><input type="checkbox" name="Languages" id="Hindi"> Hindi</label>
+                        <label for="Telugu"><input type="checkbox" name="Languages" id="Telugu"> Telugu</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3"><input type="checkbox" checked="checked" name="declare">Hereby I declare all the given details are true</td>
+                </tr>
+                <tr>
+                    <td colspan="3" align="right">Log in to <a href="https://ethnus.com" target="_blank">Ethnus</a> website</td>
+                </tr>
+            </table>
+            <br>
+            <center>
+                <input type="submit" name="register" value="Register" class="btn">
+            </center>
+        </form>
+    </div>
+    <script>
+        function validateForm(){
+            var isValid = true;
+            // Reset previous error messages
+            var errorSpans = document.querySelectorAll('.error-msg');
+            errorSpans.forEach(function(span){
+                span.textContent = '';
+            });
+            // Validate First Name
+            var firstName = document.forms["registrationForm"]["FirstName"].value;
+            if (firstName == ""){
+                document.getElementById('errorFirstName').textContent = 'POOR';
+                isValid = false;
+            }
+            // Validate Last Name
+            var lastName = document.forms["registrationForm"]["LastName"].value;
+            if (lastName == ""){
+                document.getElementById('errorLastName').textContent = 'POOR';
+                isValid = false;
+            }
+            // Validate Email
+            var email = document.forms["registrationForm"]["Email"].value;
+            if (email == ""){
+                document.getElementById('errorEmail').textContent = 'POOR';
+                isValid = false;
+            }
+            // Validate Password
+            var password = document.forms["registrationForm"]["password"].value;
+            if (password == ""){
+                document.getElementById('errorPassword').textContent = 'POOR';
+                isValid = false;
+            }
+            // Validate Re-enter Password
+            var rePassword = document.forms["registrationForm"]["re password"].value;
+            if (rePassword == ""){
+                document.getElementById('errorRePassword').textContent = 'POOR OR MISMATCH';
+                isValid = false;
+            } 
+            else if (password != rePassword){
+                document.getElementById('errorRePassword').textContent = 'POOR OR MISMATCH';
+                isValid = false;
+            }
+            // Validate Age
+            var age = document.forms["registrationForm"]["Age"].value;
+            if (age == "" || isNaN(age)){
+                document.getElementById('errorAge').textContent = 'POOR';
+                isValid = false;
+            }
+            // Validate Phone Number
+            var phoneNumber = document.forms["registrationForm"]["Phone"].value;
+            if (phoneNumber == "" || isNaN(phoneNumber) || phoneNumber.length < 10){
+                document.getElementById('errorPhone').textContent = 'POOR';
+                isValid = false;
+            }
+            // Validate Address
+            var address = document.forms["registrationForm"]["Address"].value;
+            if (address == ""){
+                document.getElementById('errorAddress').textContent = 'POOR';
+                isValid = false;
+            }
+            //Validate State
+            var state = document.forms["registrationForm"]["State"].value;
+            if (state == ""){
+                document.getElementById('errorState').textContent = 'POOR';
+                isValid = false;
+            }
+            // Validate Declaration Checkbox
+            var declareCheckbox = document.forms["registrationForm"]["declare"];
+            if (!declareCheckbox.checked){
+                document.getElementById('errorDeclare').textContent = 'POOR';
+                isValid = false;
+            }
+            return isValid;
+        }
+    </script>
+</body>
+</html>

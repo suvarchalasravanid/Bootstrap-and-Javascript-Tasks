@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-6</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .margin-down{
+            margin-bottom: 1rem;
+        }
+        .shadow-sm {
+            box-shadow: 0 0.25rem 0.55rem rgba(206, 195, 195, 0.075) !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="d-flex flex-column justify-content-center align-items-center mt-5">
+        <form action="" class="bg-light w-25 px-5 py-3 shadow-sm mb-3 border-bottom" onsubmit="return validateForm()">
+            <h3 class="text-center margin-down" style="font-family: Georgia, 'Times New Roman', Times, serif; font-style: italic;">Instagram</h3>
+            <div class="margin-down">
+                <div class="input-group">
+                    <span class="input-group-text" id="userIcon"><i class="fa fa-user" aria-hidden="true"></i></span>
+                    <input type="text" class="form-control p-2" aria-describedby="userIcon" placeholder="Username" id="username" required>
+                </div>
+                <div id="usernameError" class="text-danger mt-1"></div>
+            </div>
+            <div class="margin-down">
+                <div class="input-group">
+                    <span class="input-group-text" id="passwordIcon"><i class="fa fa-lock" aria-hidden="true"></i></span>
+                    <input type="password" class="form-control p-2" aria-describedby="passwordIcon" placeholder="Password" id="password" required>
+                </div>
+                <div id="passwordError" class="text-danger mt-1"></div>
+            </div>
+            <div class="margin-down">
+                <input type="submit" value="Log In" class="btn btn-primary form-control">
+            </div>
+            <div class="d-flex justify-content-around margin-down">
+                <div>
+                    <label>
+                        <input type="checkbox" name="remember" class="rem">Remember me
+                    </label>
+                </div>
+                <a href="#" >Forgot Password?</a>
+            </div>
+        </form>
+        <p>Don't have an account!<a href="#"> Sign Up here.</a></p>
+    </div>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <script>
+        function validateForm(){
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+            var valid = true;
+            if (username.length < 5){
+                document.getElementById('usernameError').innerText = "Username must be at least 5 characters long.";
+                valid = false;
+            } 
+            else{
+                document.getElementById('usernameError').innerText = "";
+            }
+            if (password.length < 5){
+                document.getElementById('passwordError').innerText = "Password must be at least 5 characters long.";
+                valid = false;
+            } 
+            else{
+                document.getElementById('passwordError').innerText = "";
+            }
+            return valid;
+        }
+    </script>
+</body>
+</html>
